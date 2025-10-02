@@ -1,0 +1,890 @@
+body {
+  background-color: rgb(255, 229, 229);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(255, 229, 229);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  .header__line {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 30vw;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    font-size: 1.8rem;
+    font-family: 'AcademyEngravedLetPlain', sans-serif;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 20px 15px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    /* アンダーラインを消す */
+    color: #000;
+  }
+
+  nav a:hover {
+    background-color: rgba(255, 192, 203, 0.4);
+  }
+
+  nav img {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+}
+
+/*バーガーアイコン*/
+.header__toggle {
+  display: none; // PCでは非表示
+  flex-direction: column;
+  justify-content: space-between;
+  width: 10px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+
+  span {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: #000;
+    border-radius: 2px;
+  }
+}
+
+/*スマホ用*/
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    max-width: 400px; // 最大幅を設定してさらに制御
+    margin: 0 auto; // 中央寄せ
+    height: 80px;
+  }
+
+  .header__inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .header__logo {
+    width: 300px !important;
+  }
+
+  .header__toggle {
+    margin-left: auto; // 右寄せに配置
+    display: flex; // スマホでは出す
+
+  }
+
+  .header__nav {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    height: auto; // 高さは自動
+    max-height: 50vh; // 最大高さを50vhに制限
+    background: rgb(255, 229, 229, 0.6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    overflow-y: auto; // リンクが多くてもスクロール可能
+    box-sizing: border-box;
+  }
+
+  .header__nav.active {
+    display: flex !important;
+  }
+
+  .header__nav-item {
+    padding: 10px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    box-sizing: border-box;
+  }
+}
+
+.top-decoration {
+  position: relative;
+  text-align: left;
+
+  &__line {
+    height: 100px;
+    background: #ffafc7;
+  }
+
+  &__line2 {
+    height: 100px;
+    background: #ffafc7;
+  }
+
+  &__effect {
+    position: absolute;
+    top: 0px;
+    transform: none;
+    width: 800px;
+  }
+
+  &__effect2 {
+    position: absolute;
+    top: 0px;
+    transform: none;
+    width: 800px;
+    margin-top: 150px;
+    right: 0;
+  }
+
+  &__logo img {
+    position: absolute;
+    width: 40%;
+    display: block;
+    height: auto;
+    top: 40%;
+    right: 10%;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 15vw;
+  }
+
+  &__title {
+    width: 15vw;
+  }
+}
+
+.about-text {
+  margin-left: 20px;
+  flex: 1;
+  font-size: 2.5rem;
+  margin-top: 20%;
+
+  &__item {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.about__shine {
+  &--right {
+    position: absolute;
+    width: 8vw;
+    right: 10%;
+    margin-top: 10%;
+  }
+
+  &--left {
+    position: absolute;
+    width: 8vw;
+    margin-top: 60%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-text {
+    font-size: 30px;
+  }
+}
+
+.work-history {
+  margin-top: 10%;
+
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #333;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 35vw;
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__shine {
+    position: absolute;
+    width: 8vw;
+    display: block;
+    right: 0;
+    margin-top: -5%;
+  }
+
+  /* 各職歴のコンテナ */
+  &__job {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10%;
+    font-size: 2rem;
+
+    /* 職歴ごとの修飾子 */
+    &--sweets-factory {}
+
+    &--cafe {}
+
+    &--cleaning {}
+  }
+
+  &__icon {
+    width: 30vw;
+    display: block;
+  }
+
+  &__summary {
+    margin-top: 5%;
+    line-height: 2.5;
+  }
+
+  &__detail {
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: left;
+    width: 50%;
+    margin: 5% auto 10%;
+  }
+
+  &__qualification {
+    font-size: 0.8rem;
+  }
+}
+
+.skill {
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      flex: 1; // ロゴの横幅以外を全部線で埋める
+      height: 1px;
+      background: #333;
+      margin-left: 10px; // ロゴとの間隔
+    }
+
+    img {
+      width: 18vw; // ロゴの大きさ
+      display: block; // 下に余白が出ないように
+      margin-left: 0; // 左寄せ
+    }
+  }
+
+  &__shine--left {
+    position: absolute;
+    width: 8vw;
+    display: block;
+  }
+
+  .skill__icons img {
+    width: 20vw;
+  }
+
+  .skill__item {
+    &--camera {
+      position: absolute;
+      left: 10%;
+      margin-top: 10%;
+    }
+
+    &--nail {
+      position: absolute;
+      left: 50%;
+    }
+
+    &--photoshop {
+      position: absolute;
+      left: 35%;
+      margin-top: 25%;
+    }
+
+    &--sewing {
+      position: absolute;
+      left: 70%;
+      margin-top: 20%;
+    }
+  }
+
+  &__shine--right {
+    position: absolute;
+    width: 8vw;
+    display: block;
+    right: 10%;
+    margin-top: 5%;
+  }
+
+  &__shine--bottom {
+    position: absolute;
+    width: 8vw;
+    display: block;
+    right: 30%;
+    margin-top: 30%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* ビューポート幅 */
+  height: 100vh;
+  /* ビューポート高さ */
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal__img {
+  max-width: 95%;
+  max-height: 95%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* これで縦横比を保持 */
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hobby {
+  margin-top: 60%;
+
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      flex: 1; // 左端まで伸ばす
+      position: absolute;
+      height: 1px;
+      background: #333;
+      left: 0;
+      width: 55%;
+    }
+
+    img {
+      position: absolute;
+      width: 20vw;
+      display: block; // 画像の下に余白が出ないように
+      right: 20%;
+    }
+  }
+
+  &__shine--top {
+    position: absolute;
+    width: 8vw;
+    margin-top: -8%;
+    right: 10%;
+  }
+
+  &__shine--right {
+    position: absolute;
+    width: 5vw;
+    right: 5%;
+  }
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column; // 縦に画像→キャプション
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+
+  &__image {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-top: 10%;
+  }
+
+  &__caption {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #333;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &--prev {
+      left: 10%;
+    }
+
+    &--next {
+      right: 10%;
+    }
+  }
+}
+
+.idealme {
+  position: relative;
+  margin-top: 10%;
+
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+    top: 0; // ロゴ全体の位置
+    left: 0;
+    width: 100%; // ← これがないと ::after が消える
+
+    &--icon {
+      position: absolute;
+      width: 18vw;
+      left: 0;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    &-img {
+      position: absolute;
+      width: 23vw;
+      left: 15%;
+      top: 75%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #000;
+      right: 0;
+      left: 40vw; // アイコン分右にずらす
+      margin-top: 5%;
+    }
+  }
+}
+
+.idealme__shine {
+  position: absolute;
+
+  &--title-left {
+    width: 5vw;
+    margin-top: 5%;
+  }
+
+  &--title-right {
+    width: 5vw;
+    left: 15%;
+    margin-top: -7%;
+  }
+
+  &--right {
+    width: 10vw;
+    right: 10%;
+    margin-top: 20%;
+  }
+
+  &--left {
+    width: 10vw;
+    left: 15%;
+    margin-top: 85%;
+  }
+
+  &--bottom-right {
+    width: 10vw;
+    right: 15%;
+    margin-top: 140%;
+  }
+
+  &--bottom-left {
+    width: 10vw;
+    left: 15%;
+    margin-top: 180%;
+  }
+}
+
+.idealme__content {
+  max-width: 800px; // 文章の横幅を制限（読みやすくなる）
+  margin: 0 auto; // 横方向を中央寄せ
+  text-align: left; // 中の文章は左揃え
+  padding: 0 5%; // 画面が狭いときの余白確保
+}
+
+.idealme__text {
+  font-size: 2rem;
+
+  &--title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20%;
+    margin-top: 50%;
+  }
+
+  &--subtitle {
+    font-size: 2.5rem;
+    margin-top: 3%;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  &--detail {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 10%;
+    line-height: 3;
+  }
+
+  &--summary {
+    margin: 2% 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+    line-height: 3;
+  }
+}
+
+.work {
+  position: relative;
+  height: 100vh;
+
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+
+    position: absolute;
+    width: 100%;
+    display: flex;
+
+    &-img {
+      position: absolute;
+      width: 18vw;
+      margin-top: 10%;
+      right: 15%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #000;
+      right: 35vw;
+      left: 0;
+      top: 15vw;
+    }
+  }
+
+  &__shine {
+    position: absolute;
+
+    &--title-right {
+      width: 8vw;
+      right: 5%;
+      margin-top: 8%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 70%; // 縦方向の位置
+    left: 50%; // 横方向の中心に配置
+    transform: translate(-50%, -50%); // 自身の幅・高さを考慮して中央
+    font-size: 2rem;
+    text-align: center;
+    width: 80%; // 複数行でも中央寄せ  }
+  }
+}
+
+.contact {
+  position: relative;
+
+  &__logo {
+    opacity: 0;
+    transform: translateY(20px);
+
+    // position: absolute; ←外す！
+    text-align: left; // 左寄せ（必要なら）
+    margin-bottom: 5vw;
+
+    &-img {
+      width: 20vw;
+      margin-top: 10%;
+      margin-left: 1%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #000;
+      right: 0;
+      left: 28vw;
+      top: 15vw;
+    }
+  }
+
+  &__shine {
+    position: absolute;
+
+    &--title {
+      width: 6vw;
+      left: 23%;
+      top: 8vw;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      min-height: 1vw;
+      padding: 0.8rem;
+      font-size: 1.4rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 40%;
+      margin: 0 auto;
+    }
+
+    textarea {
+      min-height: 200px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      width: 20%;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+
+      &:hover {
+        background: #555;
+      }
+    }
+  }
+
+  &__shine--bottom {
+    position: absolute;
+    width: 13vw;
+    margin-top: 15%;
+    left: 30%;
+  }
+
+  &__text {
+    font-size: 2.3em;
+    text-align: right;
+    margin-top: 23%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    /* 横幅を追加 */
+    background: #000;
+    z-index: 1;
+    /* 念のため */
+    margin-top: 96%;
+    left: 0;
+  }
+}
+
+.footer {
+  .footer__line {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .footer__logo {
+    width: 400px;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    font-size: 1.8rem;
+    font-family: 'AcademyEngravedLetPlain', sans-serif;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 20px 15px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    /* アンダーラインを消す */
+    color: #000;
+  }
+
+  nav a:hover {
+    background-color: rgba(255, 192, 203, 0.4);
+  }
+
+  nav img {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: none; // ボタン背景は消す
+  padding: 0; // 余白を消す
+  display: none; // 最初は非表示
+  z-index: 1000;
+
+  img {
+    width: 90px; // アイコン画像の大きさ
+    height: auto;
+    cursor: pointer; // マウスを当てるとポインタに
+  }
+}
+
+.result {
+  margin-bottom: 30%;
+  margin-top: 30%;
+
+  &__title img {
+    width: 20vw;
+  }
+
+  &__text {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+/*アニメーション用*/
+.slow-fade {
+  --animate-duration: 5s;
+}
+
+.js-flipInX {
+  opacity: 0; // 最初は非表示
+  transform: translateY(20px); // 下にちょっとずらす
+
+  &.animate__animated.animate__flipInX {
+    opacity: 1; // 表示
+    transform: translateY(0);
+  }
+}
