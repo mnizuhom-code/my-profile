@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My profile</title>
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__title">My profile</h1>
+            <!-- ハンバーガーアイコン -->
+            <button class="header__toggle" aria-label="メニューを開閉">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="header__nav">
+                <a href="#about" class="header__nav-item">About</a>
+                <a href="#work-history" class="header__nav-item">Work History</a>
+                <a href="#skill" class="header__nav-item">Skill</a>
+                <a href="#hobby" class="header__nav-item">Hobby</a>
+                <a href="#idealme" class="header__nav-item">Ideal me</a>
+                <a href="#work" class="header__nav-item">Work</a>
+                <a href="#contact" class="header__nav-item">contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="top">
+            <div class="top-decoration">
+                <div class="top-decoration__line"></div>
+                <img src="img/top-effect.png" alt="装飾" class="top-decoration__effect">
+                <img src="img/photo-sakura.jpg" alt="桜の写真" class="top-decoration__photo">
+                <img src="img/top-effect-under.png" alt="ピンクの装飾" class="top-decoration__effect2">
+                <div class="top-decoration__line2"></div>
+                <h1 class="top-decoration__logo animate__animated animate__fadeIn"><img src="img/mizuho-code.png" alt="mizuho.code"></h1>
+            </div>
+            <section class="about" id="about">
+                <h2 class="about__heading">
+                    <img src="img/girl.png" alt="girl icon" class="about__icon">
+                   <span class="title-line"><img src="img/about.png" alt="about" class="about__title"></span>
+                </h2>
+                <img src="img/shine-effect3.png" alt="shine-effect" class="about__shine about__shine--right">
+                <div class="about-text">
+                    <p class="about-text__item">初めまして。当サイトをご覧いただき、</p>
+                    <p class="about-text__item">ありがとうございます。</p>
+                    <p class="about-text__item">Mizuho.codeと申します。</p>
+                    <p class="about-text__item">30代でweb業界への道を目指して</p>
+                    <p class="about-text__item">日々奮闘しております。</p>
+                    <p class="about-text__item">このサイトはそんな私のことを</p>
+                    <p class="about-text__item">知ってもらいたくて作成しました。</p>
+                </div>
+                <img src="img/shine-effect2.png" alt="shine-effect" class="about__shine about__shine--left">
+            </section>
+            <section class="work-history" id="work-history">
+                <h2 class="work-history__logo js-slideinleft">
+                    <img src="img/workhistory.png" alt="work history" class="animate__animated animate__slideInLeft">
+                </h2>
+                <div class="work-history__job work-history__job--sweets-factory">
+                    <img src="img/shine-effect3.png" class="work-history__shine work-history__shine--right">
+                    <img src="img/sweets-factory-icon.png" alt="sweets-factory-icon" class="work-history__icon">
+                    <p class="work-history__summary">
+                        お菓子の工場で12年<br>
+                        機械の整備、オペレーター<br>
+                        事務職<br>
+                        出荷作業(フォークリフト免許取得)<br>
+                    </p>
+                </div>
+                <p class="work-history__detail">
+                    様々な仕事をさせていただきました。事務職に関しては労務管理課に所属し、<br>
+                    社会保険や給与計算、年末調整などを学びました。
+                </p>
+                <div class="work-history__job work-history__job--cafe">
+                    <img src="img/cafe-icon.png" alt="cafe-icon" class="work-history__icon">
+                    <p class="work-history__summary">
+                        カフェキッチンスタッフ1年<br>
+                        食事や飲み物の提供<br>
+                        新メニューの開発<br>
+                        メニュー表やオーダー表の作成(Excel)<br>
+                    </p>
+                </div>
+                <p class="work-history__detail">
+                    お客様に楽しんでいただけるように、丁寧な盛り付けを心がけ、<br>
+                    できる限り素早く提供できるように効率よ作業することを一番に考えながら<br>
+                    作業していました。
+                </p>
+                <div class="work-history__job work-history__job--cleaning-shop">
+                    <img src="img/cleaning-shop-icon.png" alt="cleaning-shop-icon" class="work-history__icon">
+                    <p class="work-history__summary">
+                        クリーニング店の受付スタッフ6ヶ月<br>
+                        CAA<span class="work-history__qualification">(クリーニングアシスタントアドバイザー)</span>資格取得<br>
+                        自社接客勉強会にて接客を学ぶ<br>
+                    </p>
+                </div>
+                <p class="work-history__detail">
+                    接客の大切さを学びました。短い期間の中で、クリーニングの基礎知識、<br>
+                    言葉遣いの重要性を身につけることができました。おすすめしたオプションを<br>
+                    お客様につけていただけたり、喜んでくださる姿がとても嬉しく思いました。
+                </p>
+            </section>
+            <!--ウェブスキル追加、ネイルスキル削除-->
+            <section class="skill" id="skill">
+                <h2 class="skill__logo js-slideInRight">
+                    <img src="img/skill.png" alt="skill" class="animate__animated animate__slideInRight">
+                </h2>
+                <img src="img/shine-effect2.png" alt="shine-effect" class="skill__shine skill__shine--left">
+                <div class="skill__icons">
+                    <img src="img/camera-skill.png" data-large="img/camera-sample.JPG" alt="camera-skill"
+                        class="skill__item skill__item--camera">
+                    <img src="img/nail-skill.png" data-large="img/nail-sample.jpeg" alt="nail-skill"
+                        class="skill__item skill__item--nail">
+                    <img src="img/photoshop-skill.png" data-large="img/photoshoo-skill-img.jpg" alt="photoshop-skill"
+                        class="skill__item skill__item--photoshop">
+                    <img src="img/sewing-skill.png" data-large="img/sewing-sample.JPEG" alt="sewing-skill"
+                        class="skill__item skill__item--sewing">
+                </div>
+                <img src="img/shine-effect.png" alt="shine-effect" class="skill__shine skill__shine--right">
+                <img src="img/shine-effect.png" alt="shine-effect" class="skill__shine skill__shine--bottom">
+            </section>
+            <section class="hobby" id="hobby">
+                <h2 class="hobby__logo js-slideinleft">
+                    <img src="img/hobby.png" alt="hobby" class="animate__animated animate__slideInLeft">
+                </h2>
+                <img src="img/shine-effect2.png" alt="shine-effect" class="hobby__shine hobby__shine--top">
+                <img src="img/shine-effect3.png" alt="shine-effect" class="hobby__shine hobby__shine--right">
+                <!--スライダー-->
+                <div class="slider">
+                    <button id="prev" class="slider__button slider__button--prev">
+                        <img src="img/arrow-left.png" alt="前へ">
+                    </button>
+
+                    <img id="slide-image" src="img/camera-icon.png" alt="スライド" class="slider__image">
+
+                    <button id="next" class="slider__button slider__button--next">
+                        <img src="img/arrow-right.png" alt="次へ">
+                    </button>
+
+                    <p id="caption" class="slider__caption"></p>
+                </div>
+            </section>
+            <section id="idealme" class="idealme">
+                <h2 class="idealme__logo js-slideInRight">
+                    <img src="img/girl-color.png" alt="girl" class="idealme__logo--icon">
+                    <img src="img/idealme.png" alt="ideal me"
+                        class="idealme__logo-img animate__animated animate__slideInRight">
+                </h2>
+                <img src="img/shine-effect2.png" alt="shine-effect" class="idealme__shine idealme__shine--title-right">
+                <img src="img/shine-effect2.png" alt="shine-effect" class="idealme__shine idealme__shine--title-left">
+                <img src="img/shine-effect3.png" alt="shine-effect" class="idealme__shine idealme__shine--right">
+                <img src="img/shine-effect2.png" alt="shine-effect" class="idealme__shine idealme__shine--left">
+                <img src="img/shine-effect.png" alt="shine-effect" class="idealme__shine idealme__shine--bottom-right">
+                <img src="img/shine-effect3.png" alt="shine-effect" class="idealme__shine idealme__shine--bottom-left">
+            </section>
+            <section class="idealme__content">
+                <p class="idealme__text idealme__text--title">なりたい自分。</p>
+                <p class="idealme__text idealme__text--subtitle js-flipInX">web業界を目指そうと思ったきっかけ</p>
+                <p class="idealme__text idealme__text--detail">
+                    初めてこの業界に興味を持ったのは私が高校生の頃のことでした。<br>
+                    実は好きなコスプレイヤーさんが出した「コスプレROM」を見て
+                    衝撃を受けたことがきっかけだったんです。<br>
+                    可愛い装飾が施され、キャラクターにあった色合いや写真の配置、
+                    いろんなアニメーションで動く文字や写真。こんなことができるなんて
+                    すごいと思っていました。<br>
+                    ですが、この頃は特に自分で作ってみようなんて考えてはいませんでした。
+                </p>
+                <p class="idealme__text idealme__text--subtitle js-flipInX">そこから14年経って変わったことは</p>
+                <p class="idealme__text idealme__text--detail">
+                    いろんな職業で働き、たくさんの人と交流をする中で、やっぱり自分でも
+                    サイトを作ってみたいなと思うようになっていきました。<br>
+                    最初はエンジニアの友人に相談しながら本を参考にサイトを作りました。<br>
+                    そしてすごく楽しいと思ったんです。コードを入力すると反映されることが
+                    不思議で、面白かったです。<br>
+                    一旦はサイトを作って満足して、仕事にしようとまでは思いませんでしたが、
+                    友人の後押しと、職業訓練校の存在を知ったことで、これが最後のチャンスと
+                    思い切ってweb制作業界へ一歩踏み出したのです。
+                </p>
+                <p class="idealme__text idealme__text--subtitle js-flipInX">とにかく動いていたい性格</p>
+                <p class="idealme__text idealme__text--detail">
+                    今まで働いてみて気づいたことはとにかく何かしら動いていたい性格だ
+                    ということです。<br>「暇な時間」よりも「忙しくて大変」な作業を
+                    好む傾向にありました。<br>
+                    そして、接客業を始めてからは実際にお客様とお話ししていく中で
+                    やりがいを強く感じるようになっていきました。
+                </p>
+                <p class="idealme__text idealme__text--subtitle js-flipInX">経験や趣味、スキルを活かして</p>
+                <ul class="idealme__text idealme__text--summary">
+                    <li>接客業で培ったスキルと人見知りをしない明るい性格</li>
+                    <li>趣味の写真撮影技術</li>
+                </ul>
+                <p class="idealme__text idealme__text--detail">
+                    きっとこのスキルはweb制作においても役立つと自負しています。<br>
+                    いつかwebディレクターになれるように勉強したり、
+                    経験を積んでいきたいと考えています。
+                </p>
+            </section>
+            <!--他の自作サイト-->
+            <section id="work" class="work">
+                <h2 class="work__logo js-slideinleft">
+                    <img src="img/work.png" alt="work" class="work__logo-img animate__animated animate__slideInLeft">
+                </h2>
+                <img src="img/shine-effect3.png" alt="shine-effect" class="work__shine work__shine--title-right">
+                <div class="work__link">
+                    <!--今後作ったサイトのURLとかトップページのスクショみたいなやつが載る予定-->
+                </div>
+                <p class="work__text">
+                    制作したWebページを掲載していきますが、現在はまだ作品はありません。
+                </p>
+            </section>
+            <section id="contact" class="contact">
+                <h2 class="contact__logo js-slideInRight">
+                    <img src="img/contact.png" alt="contact"
+                        class="contact__logo-img animate__animated animate__slideInRight">
+                    <img src="img/shine-effect.png" alt="shine-effect" class="contact__shine contact__shine--title">
+                </h2>
+                <form action="result.html" class="contact__form">
+                    <label>
+                        お名前
+                        <input type="text" name="name">
+                    </label>
+
+                    <label>
+                        メールアドレス
+                        <input type="email" name="email">
+                    </label>
+
+                    <label>
+                        メッセージ
+                        <textarea name="message"></textarea>
+                    </label>
+
+                    <input type="submit" value="送信">
+                </form>
+                <img src="img/girl.png" alt="girl" class="contact__shine contact__shine--bottom">
+                <p class="contact__text">
+                    最後までご覧いただき、ありがとうございました。
+                </p>
+            </section>
+    </main>
+    <button id="back-to-top"><img src="img/arrow-top.png" alt="トップへ戻る"></button>
+    <div class="modal" id="skillModal">
+        <span class="modal__close" id="skillModalClose">&times;</span>
+        <img class="modal__img" id="skillModalImg" src="" alt="拡大画像">
+    </div>
+    <script>
+        const slides = [
+            { img: "img/camera-icon.png", caption: " 写真撮影<br>カメラはPENTAX K- 70を愛用しています。レンズは50mmの単焦点レンズのみ。<br>この背景の綺麗なボケがたまらなく好きなんです。" },
+            { img: "img/game-icon.png", caption: "ゲーム<br>パズルゲーム、RPG、オープンワールドなど、結構幅広いジャンルが好きです。<br>最近はスマホゲームでサクッと遊べちゃうものがお気に入りです。<br>長年大好きなのはドラゴンクエストです。" },
+            { img: "img/home-garden-icon.png", caption: " 家庭菜園<br>プランターでイチゴやいちじくを育てています。毎年収穫が楽しみです。<br>次はお花に挑戦してみたいです。いつか可愛いお庭にするのが夢です。" },
+            { img: "img/nail-icon.png", caption: "セルフネイル<br>今は100均などで手軽に手に入るようになったので、たまに立ち寄っては<br>ジェルネイルを買い集めて、自分の好きなカラーや、季節に合わせたデザインで<br>爪を飾るのが好きです。手元が可愛くなるとテンションもあがっちゃいます!" },
+            { img: "img/talk-icon.png", caption: " おしゃべり<br>友人や家族との他愛無い会話や、相談したり相談に乗ったり、<br>とにかくお話しするのが好きです。いろんな思想の人と意見交換するのが好きで、<br>特に人見知りもしないので、初めましての方ともお話しできます。<br>" },
+            { img: "img/badominton-icon.png", caption: "バドミントン<br>月に1〜2回ほどのペースで参加しています。サークルには老若男女様々な人たちが参加しており、<br>楽しくバドミントンして汗を流しています。体を動かすってストレス解消にもとてもいいですよね。" }
+        ];
+
+        let current = 0;
+
+        const slideImage = document.getElementById("slide-image");
+        const caption = document.getElementById("caption");
+
+        function showSlide(index) {
+            slideImage.src = slides[index].img;
+            caption.innerHTML = slides[index].caption;
+        }
+
+        showSlide(current);
+
+        document.getElementById("next").addEventListener("click", () => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        });
+    </script>
+    <script>
+        const modal = document.getElementById("skillModal");
+        const modalImg = document.getElementById("skillModalImg");
+        const modalClose = document.getElementById("skillModalClose");
+
+        document.querySelectorAll(".skill__icons img").forEach(icon => {
+            icon.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = icon.src;
+            });
+        });
+
+        modalClose.addEventListener("click", () => {
+            modal.style.display = "none";
+            modalImg.src = "";
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                modalImg.src = "";
+            }
+        });
+        document.querySelectorAll(".skill__icons img").forEach(icon => {
+            icon.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = icon.dataset.large; // data-largeの画像を表示
+            });
+        });
+    </script>
+    <script>
+        const backToTop = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = "block"; // スクロールしたら表示
+            } else {
+                backToTop.style.display = "none";  // 上にいるときは非表示
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"  // スムーズにスクロール
+            });
+        });
+    </script>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector(".header");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                // 下にスクロール → ヘッダー隠す
+                header.classList.add("hidden");
+            } else {
+                // 上にスクロール → ヘッダー表示
+                header.classList.remove("hidden");
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <!--トップアニメーション-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            setTimeout(() => {
+                $(".top-decoration__logo img")
+                    .addClass("show animate__animated animate__fadeIn");
+            }, 500);
+        });
+        $(".top-decoration__logo img")
+            .addClass("show animate__animated animate__fadeIn slow-fade");
+    </script>
+    <!--スライド左アニメーション-->
+    <script>
+        $(window).on('scroll', function () {
+             if (window.innerWidth < 769) return; // スマホは何もしない
+            $('.js-slideinleft').each(function (i) {
+                var elemTop = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var winHeight = $(window).height();
+
+                if (scroll > elemTop - winHeight * 0.8) {
+                    $(this).delay(i * 300).queue(function (next) {
+                        $(this).addClass("animate__animated animate__slideInLeft").css({
+                            opacity: 1,
+                            transform: "translateY(0)"
+                        });
+                        next();
+                    });
+                }
+            });
+        });
+    </script>
+    <!--スライド右アニメーション-->
+    <script>
+        $(window).on('scroll', function () {
+             if (window.innerWidth < 769) return; // スマホは何もしない
+            $('.js-slideInRight').each(function (i) {
+                var elemTop = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var winHeight = $(window).height();
+
+                if (scroll > elemTop - winHeight * 0.8) {
+                    $(this).delay(i * 300).queue(function (next) {
+                        $(this).addClass("animate__animated animate__slideInRight").css({
+                            opacity: 1,
+                            transform: "translateY(0)"
+                        });
+                        next();
+                    });
+                }
+            });
+        });
+    </script>
+    <!--フリップインXアニメーション-->
+    <script>
+        $(window).on('scroll', function () {
+             if (window.innerWidth < 769) return; // スマホは何もしない
+            $('.js-flipInX').each(function (i) {
+                var elemTop = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var winHeight = $(window).height();
+
+                if (scroll > elemTop - winHeight * 0.8) {
+                    if (!$(this).hasClass('animate__animated')) { // 一度だけ実行
+                        $(this).delay(i * 300).queue(function (next) {
+                            $(this).addClass("animate__animated animate__flipInX");
+                            next();
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+    <!--バーガーアイコン-->
+    <script>
+const toggle = document.querySelector('.header__toggle');
+const nav = document.querySelector('.header__nav');
+
+// メニュー開閉
+toggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // クリックイベントが親要素に伝わるのを防ぐ
+  nav.classList.toggle('active');
+});
+
+// メニュー外をクリックしたら閉じる
+document.addEventListener('click', (e) => {
+  if (
+    nav.classList.contains('active') && // メニューが開いている状態で
+    !nav.contains(e.target) && // クリックした場所がメニュー内ではなく
+    !toggle.contains(e.target) // かつバーガーアイコンでもない
+  ) {
+    nav.classList.remove('active'); // メニューを閉じる
+  }
+});
+    </script>
+</body>
+    <footer>
+            <p class="footer__text">&copy; Mizuho.code</p>
+    </footer>
+</html>
