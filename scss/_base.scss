@@ -1,0 +1,48 @@
+@use "variables";
+$decoration-width: 100%;
+
+body {
+    background-color: variables.$body-background-color;
+    margin: 0;
+    padding: 0;
+}
+
+.top-decoration {
+    position: relative;
+    height: 90vh;
+    &__photo {
+        position: absolute;
+        width: $decoration-width;
+        height: 90vh;
+        object-fit: cover; // ← トリミングしながら全体を埋める
+        object-position: center; // ← 中央を基準にトリミング
+        display: block;
+    }
+
+    &__effect {
+        position: absolute;
+        width: $decoration-width;
+        z-index: 100;
+    }
+
+    &__effect2 {
+        position: absolute;
+        width: $decoration-width;
+        margin-top: 95vw;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        display: block !important;
+        z-index: 101;
+        margin-top: 100vw;
+        margin-left: 170px;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

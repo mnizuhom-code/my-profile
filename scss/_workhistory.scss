@@ -1,0 +1,21 @@
+@use "variables";
+@use "mixins";
+
+.work-history{
+    position: relative;
+    &__logo img{
+        position: relative;
+        width: variables.$contents-title-size;
+        margin-right: auto;
+    }
+    &__title--line{
+            @include mixins.section-line($width:370px);
+    }
+    &__icon{
+        width: variables.$workhistory-icon-size;
+    }
+    &__shine--right{
+        position: absolute;
+        width: variables.$contents-shine-size;
+    }
+}

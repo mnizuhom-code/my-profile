@@ -1,0 +1,76 @@
+@use "variables";
+@use "mixins";
+
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between; // タイトル左、バーガー右
+  align-items: center;
+  padding: 0 10%;
+  height: 80px;
+
+  &__title {
+    @include mixins.header-title(variables.$header-font-family, variables.$header-title-font-size);
+    margin-top: 30px;
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: variables.$burger-width;
+    height: variables.$burger-height;
+    cursor: pointer;
+    z-index: 1100;
+    border: none; // 追加：枠線を消す
+    outline: none; // 追加：フォーカス枠を消す
+    background: transparent; // 追加：背景色を透明にする
+    margin-top: 20px;
+
+    span {
+      @include mixins.burger-line;
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      background-color: #ff4d97;
+      transform: scaleY(1.3);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 100%; // ヘッダーの下
+    right: 0; // 右端に寄せる
+    width: 200px; // 好きな幅
+    background: variables.$body-background-color;
+    display: none;
+    flex-direction: column;
+    padding: 1em 0;
+    z-index: 1000;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 1em;
+      display: block;
+
+      &:hover {
+        color: #000000;
+        background-color: #ffd2e5;
+      }
+    }
+  }
+
+  &__nav.active {
+    display: flex;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}

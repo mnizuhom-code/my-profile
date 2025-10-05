@@ -1,0 +1,49 @@
+@use "variables";
+@use "mixins";
+
+.about {
+    height: 80vh;
+    &__heading {
+        display: flex;
+        align-items: center;
+        gap: 10px; // アイコンとタイトルの間隔
+    }
+
+    &__icon {
+        display: block;
+        width: variables.$contents-icon-size;
+    }
+
+    &__title {
+        position: relative;
+        display: block;
+        width: variables.$contents-title-size;
+
+        &--line {
+            @include mixins.section-line();
+        }
+    }
+
+    &__shine--right {
+        position: absolute;
+        margin-left: 80%;
+        margin-top: -10%;
+        width: variables.$contents-shine-size;
+    }
+
+    &__shine--left {
+        position: absolute;
+        margin-left: 5%;
+        width: variables.$contents-shine-size;
+    }
+
+    &-text {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 1rem;
+        &__item{
+            margin-top: 50px;
+        }
+    }
+    
+}

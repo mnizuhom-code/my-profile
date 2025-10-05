@@ -1,0 +1,31 @@
+@use "variables";
+
+@mixin burger-line {
+  display: block;
+  height: variables.$burger-line-height; // <- 名前空間付き
+  background-color: variables.$line-color;
+  border-radius: 2px;
+  width: variables.$burger-width;
+}
+@mixin header-title($font-family, $font-size) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vw;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  text-align: center;
+}
+// mixins.scss
+@mixin section-line($width: variables.$line-width, $height: variables.$line-height, $color: variables.$line-color, $margin-left: 10px) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border: none;
+  margin-left: $margin-left;
+  align-self: center;
+  flex-grow: 0; // 固定幅の場合
+}

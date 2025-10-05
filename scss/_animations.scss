@@ -1,0 +1,13 @@
+.slow-fade {
+  --animate-duration: 5s;
+}
+
+.js-flipInX {
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.animate__animated.animate__flipInX {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
